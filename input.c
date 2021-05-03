@@ -78,6 +78,7 @@ pbase=mmap(0,numbytes, PROT_WRITE, MAP_SHARED,fd,offset);
 /* copy data to buffer */
 	strcpy(pbase,buffer);
 	munmap(pbase,numbytes);
+	free(buffer);
 return success;
 }
 
